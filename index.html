@@ -49,30 +49,35 @@
       <a class="tombol_menu" onclick="klikMenu()"></a>
 
       <section class="halaman1 dalemnya_halaman" onclick="PindahKeHalaman(0)">
-        <h1 class="judul_halaman">Who am i?</h1>
+        <h1 class="judul_halaman">Hint 1</h1>
         <br>
         <br>
         <div class="ucapan1">
-          <p class="isiucapan1">Aku adalah</p>
+          <img src="gambar/gambar1.jpg" style=" width: 40%; height: 450px;" class="gambar">
+          <p class="isiucapan1" style="font-size: 25px;">Semuanya dimulai dari tempat ini, tempat ini menjadi titik awal pertemuannya & berlangsung cukup lama</p>
         </div>
       </section>
 
       <section class="halaman2 dalemnya_halaman" onclick="PindahKeHalaman(1)">
-        <h1 class="judul_halaman">For you</h1>
+        <h1 class="judul_halaman">Hint 2</h1>
         <br>
         <br>
         <div class="ucapan2">
-          <p class="isiucapan2">Kamu adalah
+          <img src="gambar/gambar2.jpg" style=" width: 40%; height: 450px;" class="gambar">
+          <p class="isiucapan2" style="font-size: 25px;">Pertemuan yang tidak disengaja yang membuat semuanya terulang kembali
           </p>
         </div>
       </section>
 
       <section class="halaman3 dalemnya_halaman" onclick="PindahKeHalaman(2)">
-        <h1 class="judul_halaman">judul 3</h1>
+        <h1 class="judul_halaman">For You</h1>
         <br>
         <br>
         <div class="ucapan3">
-          <p class="isiucapan3">isi 3</p>
+          <video width: 40%; height: 450px; controls>
+            <source src="gambar/gif.mp4" type="video/mp4">
+          </video>
+          <p class="isiucapan3" style="font-size: 25px;">Seberat apapun, sesusah apapun, dan serumit apapun itu kamu wajib menjalaninya dengan penuh percaya diri, optimis, pantang menyerah, berusaha lagi dan lagi. Tapi pasti akan ada saatnya kamu ngerasa cape, lelah, jenuh, dan ketika km ngerasain hal² itu kamu bisa cerita langsung aja chat karena aku akan berusaha selalu ada untuk kamu baik dalam suka maupun duka, selalu support kamu juga, selalu mendoakan yang terbaik buat kamu</p>
         </div>
       </section>
 
@@ -132,26 +137,31 @@
           output.innerText = "It could be that what you are doing is not right. It's better to suppress your angry and then try to solve the problem with a calm and relaxed so you can fix it";
           var audio = new Audio('audio/audio.mp3');
           audio.play();
+          audio.volume = 0.5;
         }
         if(selectedSize=="happy"){
           output.innerText = "Sometimes your joy is the source of your smile, and sometimes your smile is the source of your joy.";
           var audio = new Audio('audio/audio1.mp3');
           audio.play();
+          audio.volume = 0.5;
         }
         if(selectedSize=="tired"){
           output.innerText = "Take a break and if you are tired then you can fight. No need to be so tired with yourself to get something that, until you forget something very important to the world";
           var audio = new Audio('audio/audio2.mp3');
           audio.play();
+          audio.volume = 0.5;
         }
         if(selectedSize=="sad"){
           output.innerText = "People cry not because they're weak but because they've been strong for too long.";
           var audio = new Audio('audio/audio3.mp3');
           audio.play();
+          audio.volume = 0.5;
         }
         if(selectedSize=="flat"){
           output.innerText = "No matter how hard life seems to be through these times, may you do your best to focus on something that makes you smile.";
-          var audio = new Audio('audio/audio4f.mp3');
+          var audio = new Audio('audio/audio4.mp3');
           audio.play();
+          audio.volume = 0.5;
         }
     });
   </script>

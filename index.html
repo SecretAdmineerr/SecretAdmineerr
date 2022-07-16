@@ -35,7 +35,7 @@
             );
           } else {
             document.write(
-              "<h1 class='ucapan'>Good Night, Marcelina</h1><p class='isiucapan'>Don't complain about today. Make a better tomorrow by making the most of today.Than Don't forget to take a rest.<br>asd<p>"
+              "<h1 class='ucapan'>Good Night, Marcelina</h1><p class='isiucapan'>Don't complain about today. Make a better tomorrow by making the most of today.Than Don't forget to take a rest.<p>"
             );
           }
           document.write("</center>");
@@ -78,6 +78,9 @@
 
       <section class="halaman4 dalemnya_halaman" onclick="PindahKeHalaman(3)">
         <h1 class="judul_halaman">How was ur day?</h1>
+        <div class="ucapan4">
+          <p class="isiucapan4" style="font-size:30px">Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.</p>
+        </div>
         <p style="text-align: center; color: #ac8c8c;">Pick your Mood: </p>
         <div>
             <input type="radio" name="size" value="angry" id="angry">
@@ -87,14 +90,23 @@
             <input type="radio" name="size" value="happy" id="happy">
             <label for="happy">Happy &#128516</label>
         </div>
+        <div>
+          <input type="radio" name="size" value="tired" id="tired">
+          <label for="tired">Tired &#128555</label>
+          </div>
+        <div>
+          <input type="radio" name="size" value="sad" id="sad">
+          <label for="sad">Sad &#128557</label>
+        </div>
+        <div>
+          <input type="radio" name="size" value="flat" id="flat">
+          <label for="flat">Flat &#128529</label>
+        </div>
         <p>
           <button class="tombol" id="btn">Submit</button>
          </p>
       <p id="output"></p>
-        <div class="ucapan4">
-          <p class="isiucapan4">asd</p>
-          <p class="isiucapan4" style="font-size:30px">asdw</p>
-        </div>
+        
       </section>
     </div>
   </div>
@@ -117,10 +129,29 @@
         }
         // show the output:\
         if(selectedSize=="angry"){
-          output.innerText = "Angry";
+          output.innerText = "It could be that what you are doing is not right. It's better to suppress your angry and then try to solve the problem with a calm and relaxed so you can fix it";
+          var audio = new Audio('audio/audio.mp3');
+          audio.play();
         }
         if(selectedSize=="happy"){
-          output.innerText = "Happy";
+          output.innerText = "Sometimes your joy is the source of your smile, and sometimes your smile is the source of your joy.";
+          var audio = new Audio('audio/audio1.mp3');
+          audio.play();
+        }
+        if(selectedSize=="tired"){
+          output.innerText = "Take a break and if you are tired then you can fight. No need to be so tired with yourself to get something that, until you forget something very important to the world";
+          var audio = new Audio('audio/audio2.mp3');
+          audio.play();
+        }
+        if(selectedSize=="sad"){
+          output.innerText = "People cry not because they're weak but because they've been strong for too long.";
+          var audio = new Audio('audio/audio3.mp3');
+          audio.play();
+        }
+        if(selectedSize=="flat"){
+          output.innerText = "No matter how hard life seems to be through these times, may you do your best to focus on something that makes you smile.";
+          var audio = new Audio('audio/audio4f.mp3');
+          audio.play();
         }
     });
   </script>
@@ -146,11 +177,9 @@
   </script>
   <script>
     $(document).ready(function () {
-      var audio = new Audio('audio/audio.mp3');
       $("#tombol").click(function () {
         $("#kontener2").fadeOut();
         $("#kontener").fadeIn("4000");
-        audio.play();
       });
     });
   </script>
